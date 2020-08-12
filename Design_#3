@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+
+  .MyDesigns {
+    cursor: pointer;
+    color: white;
+    width: 100px;
+    height: 40px;
+    background: #1a73e8;
+    border: none;
+    font-size: 16px;
+    transition-duration: 0.5s;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .MyDesigns:focus {
+    outline: none;
+  }
+
+</style>
+</head>
+<body>
+
+  <button class="MyDesigns" onclick="clickMe()">
+    Button
+  </button>
+
+  <script type="text/javascript">
+    var myDesigns = document.getElementsByClassName('MyDesigns')[0];
+
+    function clickMe() {
+      myDesigns.style.background = "white";
+      myDesigns.style.color = '#1a73e8';
+      myDesigns.style.border = '2px solid #1a73e8';
+    }
+
+    window.onclick = function(event) {
+      if (event.target != myDesigns) {
+        myDesigns.style.background = '#1a73e8';
+        myDesigns.style.color = 'white';
+      }
+    }
+  </script>
+</body>
+</html>
