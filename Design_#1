@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+.MyDesigns {
+  cursor: pointer;
+  background: white;
+  color: #1a73e8;
+  width: 100px;
+  height: 40px;
+  border:2px solid lightgrey;
+  font-weight: bold;
+  transition: .5s;
+  outline: none;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.MyDesigns:focus {
+  outline: none;
+}
+@keyframes animationName {
+  0% {
+    border-bottom-color: #1a73e8;
+  }
+  25% {
+    border-left-color: #1a73e8;
+    border-right-color: #1a73e8;
+  }
+  50% {
+    border-right-color: #1a73e8;
+    border-left-color: #1a73e8;
+  }
+  75% {
+    border-top-color: #1a73e8;
+  }
+  100% {
+    border-top-color: #1a73e8;
+  }
+}
+</style>
+</head>
+<body>
+  <button class="MyDesigns" onclick="clickMe()">Click me!</button>
+<script type="text/javascript">
+  function clickMe() {
+    var myDesigns = document.getElementsByClassName('MyDesigns')[0];
+    myDesigns.style.animationName = 'animationName';
+    setTimeout(function(){ myDesigns.style.animationName = ''; }, 600);
+  }
+</script>
+</body>
+</html>
