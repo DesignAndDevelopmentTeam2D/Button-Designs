@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .myDesign {
+        position: relative;
+        border:none;
+        height: 50px;
+        width: 100px;
+        content:"My Design";
+        background-color: #1a73e8;
+        overflow: hidden;
+        cursor: pointer;
+        color: white;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .myDesign:focus {
+        outline:none;
+      }
+      .myDesign:after {
+        position:absolute;
+        content:"My Design";
+        transform:translate(-20%,-50%);
+        justify-content: center;
+        align-items: center;
+        border:none;
+        height: 150px;
+        width: 150px;
+        background-color: #1a73e8;
+        opacity:1;
+        display:flex;
+        transition:all .6s;
+      }
+      .myDesign:active:after {
+        opacity:0;
+        margin:0;
+        border:none;
+        background-color: #ffffff;
+        padding: 0;
+        height:0;
+        width:0;
+        content: "";
+        transition:0s;
+      }
+    </style>
+  </head>
+  <body>
+    <button class='myDesign'></button>
+  </body>
+</html>
